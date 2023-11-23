@@ -79,8 +79,12 @@ a {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 0 var(--container-offset);
+  width: 100%;
   max-width: var(--container-width);
 }
 
@@ -104,4 +108,36 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.btn {
+  background: #1a2a5d;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #2b53d4;
+}
+
+.btn:active {
+  background: #3b94ec;
+}
+
+.btn__back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: get-vw(40px);
+  height: get-vw(40px);
+  box-sizing: border-box;
+}
+
+.btn__back svg {
+  width: auto;
+  height: get-vw(20px);
+}
+
+main {
+  margin-top: get-vw(136px);
 }
