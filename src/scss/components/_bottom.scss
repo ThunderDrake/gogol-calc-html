@@ -1,0 +1,15 @@
+.bottom {
+  width: 100%;
+}
+
+.container__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: get-vw(30px);
+  width: 100%;
+}
+
+.pagination__wrapper {
+  display: flex;
+  gap: 10px;
+}
