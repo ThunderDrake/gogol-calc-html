@@ -2,8 +2,20 @@
   width: 100%;
 }
 
+.btn__next {
+  border-radius: get-vw(10px);
+  padding: get-vw(18px) get-vw(89px);
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  font-size: get-vw(24px);
+  line-height: normal;
+  color: #fff;
+}
+
 .container__bottom {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   margin-bottom: get-vw(30px);
   width: 100%;
@@ -11,5 +23,87 @@
 
 .pagination__wrapper {
   display: flex;
+  max-width: get-vw(540px);
   gap: 10px;
+}
+
+.pagination__item {
+  display: flex;
+  flex-basis: 12.5%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  min-width: min(29px, get-vw(50px));
+  transition: all 0.3s;
+  gap: get-vw(10px);
+}
+
+.pagination__item--active {
+  flex-basis: 25%;
+  width: 100%;
+  min-width: min(72px, get-vw(124px));
+}
+
+.pagination__line {
+  content: "";
+  border-radius: get-vw(29px);
+  width: 100%;
+  height: get-vw(5px);
+  background: #d9d9d9;
+  transition: all 0.3s;
+}
+
+.pagination__text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  font-size: get-vw(16px);
+  line-height: normal;
+  color: #1a2a5d;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.pagination__item--active .pagination__line {
+  background: #1a2a5d;
+}
+
+.pagination__item--active .pagination__text {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.btn__back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: get-vw(40px);
+  height: get-vw(40px);
+  box-sizing: border-box;
+}
+
+.btn__back svg {
+  width: auto;
+  height: get-vw(20px);
+}
+
+.cost_text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  font-size: get-vw(24px);
+  line-height: normal;
+  color: #000;
+  opacity: 0.5;
+}
+
+.cost {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  font-size: get-vw(32px);
+  line-height: normal;
+  color: #1a2a5d;
 }
