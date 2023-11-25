@@ -29,7 +29,7 @@
 
 .pagination__item {
   display: flex;
-  flex-basis: 12.5%;
+  flex-basis: 10.5%;
   flex-direction: column;
   align-items: center;
   justify-content: end;
@@ -39,7 +39,7 @@
 }
 
 .pagination__item--active {
-  flex-basis: 25%;
+  flex-basis: 26.5%;
   width: 100%;
   min-width: min(72px, get-vw(124px));
 }
@@ -86,7 +86,7 @@
 
 .btn__back svg {
   width: auto;
-  height: get-vw(20px);
+  height: max(get-vw(20px), 13px);
 }
 
 .cost_text {

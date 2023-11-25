@@ -1,8 +1,57 @@
-.model{
+.model {
+  flex: 100%;
 
-}
+  img {
+    width: 100%;
+  }
 
-.container__main {
-  display: flex;
-  width: 100%;
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: get-vw(16px);
+  }
+
+  .main {
+    &__item__name {
+      position: absolute;
+      left: get-vw(16px);
+      top: get-vw(16px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: get-vw(40px);
+      padding: get-vw(6px) get-vw(20px);
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-style: normal;
+      font-size: get-vw(16px);
+      line-height: normal;
+      color: #1a2a5d;
+      background: #fff;
+    }
+
+    &__item_text-block {
+      padding: get-vw(16px);
+      box-sizing: border-box;
+    }
+
+    &__item_text-block .text:first-child {
+      margin-bottom: get-vw(16px);
+    }
+
+    &__item {
+      position: relative;
+      border: get-vw(1px) solid #d8d8d8;
+      border-radius: get-vw(16px);
+      padding: 0;
+      width: 100%;
+      box-shadow: get-vw(4px) get-vw(4px) get-vw(25px) 0 rgb(149 149 150 / 10%);
+      box-sizing: border-box;
+      background: #fff;
+    }
+
+    &__item * {
+      text-align: left;
+    }
+  }
 }

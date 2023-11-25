@@ -131,6 +131,7 @@ main {
   padding-top: get-vw(136px);
   min-height: 100vh;
   box-sizing: border-box;
+  gap: get-vw(45px);
 }
 
 .container__title {
@@ -153,4 +154,25 @@ main {
   font-style: normal;
   font-size: get-vw(32px);
   line-height: normal;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+  font-size: get-vw(16px);
+  line-height: normal;
+  color: #1a2a5d;
+}
+
+.text span {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  font-size: get-vw(14px);
+  line-height: normal;
+  color: #000;
+  opacity: 0.4;
 }
