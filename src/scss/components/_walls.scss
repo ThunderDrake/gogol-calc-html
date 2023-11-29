@@ -1,0 +1,15 @@
+.walls {
+  .filling__inner:last-child .text{
+
+  }
+}
+
+.choices__list--dropdown {
+  display: none;
+  overflow-y: scroll;
+  max-height: get-vw(150px);
+}
+
+.choices__list--dropdown.is-active {
+  display: block;
+}
