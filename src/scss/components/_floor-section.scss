@@ -1,0 +1,38 @@
+.floor {
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    gap: get-vw(70px);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: get-vw(16px);
+  }
+
+  &__input {
+    border: 1px solid #d8d8d8;
+    border-radius: 16px;
+    padding: 2em 1.5em;
+    box-shadow: 4px 4px 25px 0 rgb(149 149 150 / 10%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: max(12px, get-vw(14px));
+    color: #000;
+    background: #fff;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+}
