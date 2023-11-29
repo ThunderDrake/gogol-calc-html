@@ -7,7 +7,7 @@
   &__input {
     display: flex;
     align-items: center;
-    width: fit-content;
+    width: 100%;
     cursor: pointer;
     gap: get-vw(25px);
   }
@@ -23,6 +23,7 @@
     border: get-vw(1px) solid rgb(26 42 93 / 24%);
     border-radius: get-vw(16px);
     padding: get-vw(28px) get-vw(36px);
+    width: 100%;
     min-width: get-vw(160px);
     box-shadow: get-vw(4px) get-vw(4px) get-vw(25px) 0 rgb(149 149 150 / 10%);
     font-family: "Montserrat";
@@ -34,6 +35,10 @@
     background: #fff;
     transition: all 0.3s;
     gap: get-vw(10px);
+
+    &--small {
+      width: fit-content;
+    }
   }
 
   &__text {
