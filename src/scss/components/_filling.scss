@@ -1,0 +1,58 @@
+.filling {
+  &__main {
+    display: flex;
+    gap: get-vw(70px);
+  }
+
+  &__inner .text {
+    margin-left: get-vw(70px);
+    color: #000;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: get-vw(16px);
+  }
+
+  &__inner span {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: normal;
+    color: #000;
+    opacity: 0.5;
+  }
+
+  &__inner,
+  &__inner .square__input,
+  &__inner .square__number {
+    justify-content: start;
+    width: 100%;
+  }
+}
+
+.square__number:has(span) {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: get-vw(24px);
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+  font-size: get-vw(24px);
+  line-height: normal;
+  color: #000;
+  gap: get-vw(10px);
+}
+
+.square__number span {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  font-size: get-vw(14px);
+  line-height: normal;
+  color: #000;
+  opacity: 0.5;
+}

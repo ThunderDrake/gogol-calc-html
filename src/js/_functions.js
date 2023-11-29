@@ -84,3 +84,5 @@ console.log(mobileCheck())
 // };
 
 // validateForms('.form-1', rules1, afterForm);
+
+

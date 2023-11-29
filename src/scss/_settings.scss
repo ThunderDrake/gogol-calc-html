@@ -2,6 +2,10 @@ html {
   box-sizing: border-box;
 }
 
+h1 {
+  margin: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -139,6 +143,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  margin-bottom: get-vw(45px);
   font-family: "Montserrat";
   font-weight: 500;
   font-style: normal;
@@ -175,4 +180,70 @@ main {
   line-height: normal;
   color: #000;
   opacity: 0.4;
+}
+
+[data-type-title],
+.container__title__text {
+  transition: all 0.3s;
+}
+
+//[data-type-block] {
+// display: none;
+// opacity: 0;
+//}
+
+//.model {
+// display: block;
+// opacity: 1;
+//}
+
+.checkbox__item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: get-vw(16px);
+}
+
+.checkbox__item input {
+  display: none;
+}
+
+.checkbox__mark {
+  width: get-vw(28px);
+  height: get-vw(28px);
+}
+
+.checkbox__item .checkbox__mark path {
+  stroke: transparent;
+  transition: all 0.3s;
+}
+
+.checkbox__item:has(input:checked) .checkbox__mark path {
+  stroke: #1a2a5d;
+}
+
+.checkbox__text {
+  display: flex;
+  flex-direction: column;
+  border: get-vw(1px) solid rgb(26 42 93 / 24%);
+  border-radius: get-vw(16px);
+  padding: get-vw(28px) get-vw(36px);
+  box-shadow: get-vw(4px) get-vw(4px) get-vw(25px) 0 rgb(149 149 150 / 10%);
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+  font-size: get-vw(22px);
+  line-height: 100%; /* 100% */
+  color: #000;
+  gap: get-vw(10px);
+}
+
+.checkbox__text span {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  font-size: get-vw(14px);
+  line-height: normal;
+  color: #000;
+  opacity: 0.5;
 }

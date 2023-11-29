@@ -1,0 +1,109 @@
+.square {
+  &__main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+    gap: get-vw(25px);
+  }
+
+  &__input input {
+    display: none;
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: get-vw(1px) solid rgb(26 42 93 / 24%);
+    border-radius: get-vw(16px);
+    padding: get-vw(28px) get-vw(36px);
+    min-width: get-vw(160px);
+    box-shadow: get-vw(4px) get-vw(4px) get-vw(25px) 0 rgb(149 149 150 / 10%);
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: normal;
+    font-size: get-vw(24px);
+    line-height: normal;
+    color: #1e1e1e;
+    background: #fff;
+    transition: all 0.3s;
+    gap: get-vw(10px);
+  }
+
+  &__text {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: normal;
+    font-size: get-vw(24px);
+    line-height: normal;
+    color: #1e1e1e;
+  }
+
+  &__input svg {
+    width: get-vw(28px);
+    height: get-vw(28px);
+  }
+
+  &__input svg circle {
+    fill: transparent;
+    transition: all 0.3s;
+  }
+
+  &__input:has(input:checked) svg circle {
+    fill: #1a2a5d;
+  }
+
+  &__right &__number {
+    border: get-vw(2px) solid #1a2a5d;
+    width: 100%;
+    max-width: get-vw(440px);
+    text-align: center;
+  }
+
+  &__right &__number__inactive {
+    position: relative;
+    border: get-vw(1px) solid #d8d8d8;
+    color: rgb(0 0 0 / 40%);
+  }
+
+  &__right &__number__inactive::before {
+    content: "Скоро";
+    position: absolute;
+    right: get-vw(-17px);
+    top: get-vw(-8px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: get-vw(0.576px) solid #d8d8d8;
+    border-radius: get-vw(26px);
+    padding: get-vw(8px) get-vw(13px);
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    font-size: get-vw(13.835px);
+    line-height: normal;
+    color: #000;
+    background: #fff;
+    transform: rotate(4deg);
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: get-vw(16px);
+  }
+
+  &__input:hover &__number {
+    border: get-vw(1px) solid #1a2a5d;
+  }
+}

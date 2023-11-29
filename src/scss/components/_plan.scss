@@ -1,0 +1,34 @@
+.plan {
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: get-vw(30px);
+    gap: get-vw(70px);
+  }
+
+  &__main img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    overflow: hidden;
+    border: get-vw(1px) solid transparent;
+    border-radius: get-vw(20px);
+    box-shadow: get-vw(4px) get-vw(4px) get-vw(25px) 0 rgb(149 149 150 / 10%);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  &__item:hover {
+    border: get-vw(1px) solid rgb(26 42 93 / 19.9%);
+  }
+
+  &__item:has(input:checked) {
+    border: get-vw(1px) solid rgb(26 42 93 / 50%);
+  }
+
+  &__item input {
+    display: none;
+  }
+}
