@@ -12,11 +12,3 @@
 @import "./components/plan";
 @import "./components/filling";
 @import "./components/walls";
-
-// тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}

@@ -71,6 +71,7 @@
       border-radius: get-vw(16px);
       padding: 0;
       width: 100%;
+      height: 100%;
       box-shadow: get-vw(4px) get-vw(4px) get-vw(25px) 0 rgb(149 149 150 / 10%);
       box-sizing: border-box;
       background: #fff;
@@ -86,6 +87,10 @@
       text-align: left;
     }
   }
+}
+
+.main__item-radio:checked + .main__item {
+  border: 0.1388888889vw solid #1a2a5d;
 }
 
 @media screen and (max-width: 768px) {

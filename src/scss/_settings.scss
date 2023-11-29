@@ -1,4 +1,5 @@
 html {
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -12,6 +13,20 @@ h1 {
   box-sizing: inherit;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body > .wrapper > main {
+  flex: 1 0 auto;
+}
+
+.bottom {
+  flex: 0 0 auto;
+}
+
 .page {
   height: 100%;
   font-family: var(--font-family, sans-serif);
@@ -19,7 +34,10 @@ h1 {
 }
 
 .page__body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  height: 100%;
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
@@ -33,10 +51,6 @@ img {
 
 a {
   text-decoration: none;
-}
-
-.site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
 
 .is-hidden {
@@ -133,7 +147,6 @@ main {
   flex-direction: column;
   justify-content: space-between;
   padding-top: get-vw(136px);
-  min-height: 100vh;
   box-sizing: border-box;
   gap: get-vw(45px);
 }
@@ -144,7 +157,7 @@ main {
   align-items: center;
   justify-content: flex-start;
   margin-bottom: get-vw(45px);
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: get-vw(32px);
@@ -154,7 +167,7 @@ main {
 }
 
 .container__title__text {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: get-vw(32px);
@@ -164,7 +177,7 @@ main {
 .text {
   display: flex;
   flex-direction: column;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: get-vw(16px);
@@ -173,7 +186,7 @@ main {
 }
 
 .text span {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: get-vw(14px);
@@ -186,16 +199,6 @@ main {
 .container__title__text {
   transition: all 0.3s;
 }
-
-//[data-type-block] {
-// display: none;
-// opacity: 0;
-//}
-
-//.model {
-// display: block;
-// opacity: 1;
-//}
 
 .checkbox__item {
   display: flex;
@@ -229,7 +232,7 @@ main {
   border-radius: get-vw(16px);
   padding: get-vw(28px) get-vw(36px);
   box-shadow: get-vw(4px) get-vw(4px) get-vw(25px) 0 rgb(149 149 150 / 10%);
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: get-vw(22px);
@@ -239,7 +242,7 @@ main {
 }
 
 .checkbox__text span {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: get-vw(14px);
