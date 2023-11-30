@@ -257,3 +257,17 @@ main {
   color: #000;
   opacity: 0.5;
 }
+
+.content-section {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.btn__back {
+  svg {
+    pointer-events: none;
+  }
+}
