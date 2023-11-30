@@ -239,6 +239,13 @@ main {
   line-height: 100%; /* 100% */
   color: #000;
   gap: get-vw(10px);
+
+  &-small {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+  }
 }
 
 .checkbox__text span {

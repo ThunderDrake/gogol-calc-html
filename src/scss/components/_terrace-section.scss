@@ -1,0 +1,42 @@
+.terrace {
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    gap: get-vw(70px);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: get-vw(16px);
+  }
+
+  &__input {
+    margin-left: 53px;
+    border: 1px solid #d8d8d8;
+    border-radius: 16px;
+    padding: 2em 1.5em;
+    box-shadow: 4px 4px 25px 0 rgb(149 149 150 / 10%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: max(12px, get-vw(14px));
+    color: #000;
+    background: #fff;
+  }
+
+  &__text {
+    margin-left: 83px;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
