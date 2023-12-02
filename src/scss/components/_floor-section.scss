@@ -13,10 +13,10 @@
   }
 
   &__input {
-    border: 1px solid #d8d8d8;
-    border-radius: 16px;
+    border: get-vw(16px) 1px solid #d8d8d8;
+    border-radius: get-vw(16px);
     padding: 2em 1.5em;
-    box-shadow: 4px 4px 25px 0 rgb(149 149 150 / 10%);
+    box-shadow: get-vw(4px) get-vw(4px)  get-vw(25px) 0 rgb(149 149 150 / 10%);
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-style: normal;

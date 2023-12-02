@@ -19,18 +19,18 @@
     &-list {
       display: flex;
       flex-direction: column;
-      margin-left: 52px;
-      gap: 24px;
+      margin-left: get-vw(52px);
+      gap: get-vw(24px);
 
       &-add {
-        margin-left: 52px;
-        border-radius: 10px;
-        padding: 12px 28px;
+        margin-left: get-vw(52px);
+        border-radius: get-vw(10px);
+        padding: get-vw(12px)  get-vw(28px);
         width: fit-content;
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
         font-style: normal;
-        font-size: 14px;
+        font-size: get-vw(14px);
         line-height: normal;
         color: #fff;
         background: #1a2a5d;
@@ -39,34 +39,34 @@
     }
 
     &-price {
-      border: 1px solid #d8d8d8;
-      border-radius: 8px;
-      padding: 30px;
+      border: get-vw(1px)  solid #d8d8d8;
+      border-radius: get-vw(8px);
+      padding: get-vw(30px);
       width: 100%;
       max-width: 420px;
-      box-shadow: 4px 4px 25px 0 rgb(149 149 150 / 10%);
+      box-shadow: get-vw(4px) get-vw(4px) get-vw(25px)  0 rgb(149 149 150 / 10%);
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
       font-style: normal;
-      font-size: 14px;
+      font-size: get-vw(14px);
       line-height: normal;
       color: #000;
       background: #fff;
     }
 
     &-text {
-      margin-right: 24px;
-      border: 1px solid #d8d8d8;
-      border-radius: 16px;
-      padding: 22px;
+      margin-right: get-vw(24px);
+      border: get-vw(1px) solid #d8d8d8;
+      border-radius: get-vw(16px);
+      padding: get-vw(22px);
       width: 100%;
-      height: 155px;
-      max-width: 630px;
-      box-shadow: 4px 4px 25px 0 rgb(149 149 150 / 10%);
+      height: get-vw(155px);
+      max-width: get-vw(630px);
+      box-shadow: get-vw(4px) get-vw(4px) get-vw(25px)  0 rgb(149 149 150 / 10%);
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
       font-style: normal;
-      font-size: 14px;
+      font-size: get-vw(14px);
       line-height: normal;
       color: #000;
       background: #fff;
@@ -82,19 +82,19 @@
   .checkbox__text {
     display: flex;
     justify-content: center;
-    padding: 14px 24px;
+    padding: get-vw(14px) get-vw(24px);
     width: 100%;
     height: 100%;
     font-size: max(20px, get-vw(24px));
-    gap: 2px;
+    gap: get-vw(2px);
   }
 
   &__input {
-    margin-left: 53px;
-    border: 1px solid #d8d8d8;
-    border-radius: 16px;
+    margin-left: get-vw(53px);
+    border: get-vw(1px) solid #d8d8d8;
+    border-radius: get-vw(16px);
     padding: 2em 1.5em;
-    box-shadow: 4px 4px 25px 0 rgb(149 149 150 / 10%);
+    box-shadow: get-vw(4px) get-vw(4px) get-vw(25px)  0 rgb(149 149 150 / 10%);
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -104,13 +104,13 @@
   }
 
   .checkbox__item--only-text {
-    margin-bottom: 24px;
-    margin-left: 52px;
-    max-width: 450px;
+    margin-bottom: get-vw(24px);
+    margin-left: get-vw(52px);
+    max-width: get-vw(450px);
   }
 
   &__text {
-    margin-left: 83px;
+    margin-left: get-vw(83px);
   }
 
   input::-webkit-outer-spin-button,
@@ -125,7 +125,7 @@
 
   .choices {
     margin-bottom: 0;
-    margin-left: 44px;
+    margin-left: get-vw(44px);
     height: fit-content;
     max-width: 360px;
 
@@ -135,7 +135,7 @@
   }
 
   .text {
-    margin-left: 76px;
+    margin-left: get-vw(76px);
   }
 
   &--third {
@@ -146,7 +146,7 @@
         flex-basis: 50%;
 
         .checkbox__text {
-          padding: 24px;
+          padding: get-vw(24px);
         }
       }
     }
@@ -158,16 +158,16 @@
 
   &--fourth {
     .checkbox__item {
-      max-width: 400px;
+      max-width: get-vw(400px);
     }
 
     .checkbox__text {
-      gap: 10px;
+      gap: get-vw(10px);
     }
 
     .additional__inner {
       height: 100%;
-      max-width: 550px;
+      max-width: get-vw(550px);
     }
 
     .additional__main {
