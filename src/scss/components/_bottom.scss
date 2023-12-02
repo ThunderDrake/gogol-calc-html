@@ -106,3 +106,8 @@
   line-height: normal;
   color: #1a2a5d;
 }
+
+.pagination__wrapper {
+  opacity: 0;
+  transition: all 0.2s;
+}

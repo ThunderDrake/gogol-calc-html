@@ -271,3 +271,11 @@ main {
     pointer-events: none;
   }
 }
+
+section {
+  transition: all 0.2s;
+}
+
+[data-type-block] {
+  margin-bottom: get-vw(40px);
+}
