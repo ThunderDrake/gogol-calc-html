@@ -111,3 +111,20 @@
   opacity: 0;
   transition: all 0.2s;
 }
+
+.cost__container {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.cost span {
+  margin-left: get-vw(8px);
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  font-size: get-vw(16px);
+  line-height: normal;
+  color: #19a857;
+  opacity: 0;
+  transition: all 0.3s;
+}
