@@ -1,0 +1,63 @@
+.total {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: get-vw(1px) solid #d8d8d8;
+    border-radius: get-vw(16px);
+    padding: get-vw(26px) get-vw(24px);
+    box-shadow: get-vw(4px) get-vw(4px) get-vw(25px) 0 rgb(149 149 150 / 10%);
+    background: #fff;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 get-vw(46px);
+    gap: get-vw(16px) get-vw(110px);
+  }
+
+  &__title {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    font-size: get-vw(24px);
+    line-height: normal;
+    color: #000;
+  }
+
+  &__remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    pointer-events: all;
+  }
+
+  &__remove svg {
+    width: get-vw(24px);
+    height: get-vw(24px);
+  }
+
+  &__remove svg path {
+    transition: all 0.3s;
+  }
+
+  &__remove:hover svg path {
+    stroke: #2b53d4;
+  }
+
+  &__type,
+  &__title span {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    font-size: get-vw(14px);
+    line-height: normal;
+    color: #000;
+    opacity: 0.5;
+  }
+}
