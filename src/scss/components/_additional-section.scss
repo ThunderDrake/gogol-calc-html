@@ -183,3 +183,37 @@
     }
   }
 }
+
+.add {
+  &__remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: get-vw(25px);
+    margin-left: get-vw(20px);
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    pointer-events: all;
+  }
+
+  &__remove svg {
+    width: get-vw(24px);
+    height: get-vw(24px);
+    pointer-events: none;
+  }
+
+  &__remove svg path {
+    transition: all 0.3s;
+  }
+
+  &__remove:hover svg path {
+    stroke: #2b53d4;
+  }
+}
+
+.additional__item:first-child .add__remove {
+  opacity: 0;
+  pointer-events: none;
+}
