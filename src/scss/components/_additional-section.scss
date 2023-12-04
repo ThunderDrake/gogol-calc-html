@@ -86,7 +86,7 @@
     width: 100%;
     height: 100%;
     font-size: max(20px, get-vw(24px));
-    gap: get-vw(2px);
+    gap: get-vw(10px);
   }
 
   &__input {
@@ -110,7 +110,7 @@
   }
 
   &__text {
-    margin-left: get-vw(83px);
+    margin-left: get-vw(52px);
   }
 
   input::-webkit-outer-spin-button,
@@ -135,7 +135,7 @@
   }
 
   .text {
-    margin-left: get-vw(76px);
+    margin-left: get-vw(52px);
   }
 
   &--third {
@@ -173,6 +173,13 @@
     .additional__main {
       justify-content: flex-start;
       gap: 0;
+    }
+  }
+
+  &--fifth {
+    .checkbox__item {
+      max-width: 32.55vw;
+      cursor: default;
     }
   }
 }

@@ -6,12 +6,6 @@
   .filling__inner:last-child {
     position: relative;
   }
-
-  .filling__inner:last-child .text:last-child {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
 }
 
 .is-flipped .choices__list--dropdown,

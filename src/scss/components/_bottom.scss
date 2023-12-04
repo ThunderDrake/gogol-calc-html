@@ -35,6 +35,7 @@
   justify-content: end;
   min-width: min(29px, get-vw(50px));
   transition: all 0.3s;
+  cursor: pointer;
   gap: get-vw(10px);
 }
 
@@ -42,6 +43,7 @@
   flex-basis: 26.5%;
   width: 100%;
   min-width: min(72px, get-vw(124px));
+  cursor: auto;
 }
 
 .pagination__line {
