@@ -51,8 +51,20 @@
     stroke: #2b53d4;
   }
 
+  .total__title__con {
+    display: flex;
+    align-items: center;
+    padding-right: get-vw(20px);
+    box-sizing: border-box;
+    gap: get-vw(10px);
+  }
+
+  &__title__cost {
+    min-width: max-content;
+  }
+
   &__type,
-  &__title span {
+  &__title__cost {
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;

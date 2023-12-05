@@ -38,6 +38,13 @@ function switchSection() {
   prevButtons.forEach(el => {
     el.addEventListener('click', (e)=>{
       go(e.target)
+      if(activeSection == sections.length - 1) {
+        nextButton.style.opacity = '0';
+        nextButton.style.pointerEvents = 'none';
+      } else{
+        nextButton.style.opacity = '1';
+        nextButton.style.pointerEvents = 'auto';
+      }
     }, false)
   })
 
@@ -54,7 +61,6 @@ function switchSection() {
 
     for (let i = 0; i < sections.length; i++) {
         sections[i].classList.remove("content-section--active");
-        console.log(sections[0].style.display);
         hide(sections[i], 200);
 
 
