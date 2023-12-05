@@ -59,7 +59,21 @@ if(btnNext && totalitem && totalMain){
             }
           });
           if(tempo == 0){
-            dataProducts.push(newElement(el.dataset.name, typeBlock, el.value));
+            if(el.classList.contains("floor__metr")){
+              dataProducts.push(newElement(el.dataset.name, typeBlock, Number(el.value * Number(document.querySelector(".floor__input").value))));
+            }else if(el.classList.contains("terrace__metr")){
+              dataProducts.push(newElement(el.dataset.name, typeBlock, Number(el.value * Number(document.querySelector(".terrace__input").value))));
+            }else if(el.classList.contains("lamp__metr")){
+              dataProducts.push(newElement(el.dataset.name, typeBlock, Number(el.value * Number(document.querySelector(".lamp__input").value))));
+            } else if(el.classList.contains("teplo__metr")) {
+              dataProducts.push(newElement(el.dataset.name, typeBlock, Number(el.value * (Number(document.querySelector("[data-choices='insulation']").value) / 50) )));
+            } else if(el.classList.contains("teplo-banya__metr")) {
+              dataProducts.push(newElement(el.dataset.name, typeBlock, Number(el.value * (Number(document.querySelector("[data-choices='bath_square']").value) / 0.5) )));
+            } else if(el.classList.contains("choices__height")) {
+              dataProducts.push(newElement(el.dataset.name, typeBlock, Number(1 * (Number(el.value) / 10))));
+            } else{
+              dataProducts.push(newElement(el.dataset.name, typeBlock, el.value));
+            }
           }
         }
       }
