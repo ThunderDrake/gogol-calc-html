@@ -85,7 +85,8 @@
     padding: get-vw(14px) get-vw(24px);
     width: 100%;
     height: 100%;
-    font-size: max(20px, get-vw(24px));
+    font-size: get-vw(24px);
+    transition: all 0.3s;
     gap: get-vw(10px);
   }
 
@@ -98,7 +99,7 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: max(12px, get-vw(14px));
+    font-size: get-vw(14px);
     color: #000;
     background: #fff;
   }
@@ -172,7 +173,7 @@
 
     .additional__main {
       justify-content: flex-start;
-      gap: 0;
+      gap: get-vw(140px);
     }
   }
 
@@ -216,4 +217,8 @@
 .additional__item:first-child .add__remove {
   opacity: 0;
   pointer-events: none;
+}
+
+.checkbox__item:hover .checkbox__text {
+  border: 0.0694444444vw solid #1a2a5d;
 }

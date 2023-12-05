@@ -35,3 +35,8 @@
     -moz-appearance: textfield;
   }
 }
+
+.floor__inner .text {
+  margin-left: get-vw(70px);
+  color: #000;
+}

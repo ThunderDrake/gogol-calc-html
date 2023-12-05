@@ -243,7 +243,7 @@ main {
   &-small {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: get-vw(16px);
     color: #000;
   }
 }

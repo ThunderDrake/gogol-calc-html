@@ -13,15 +13,15 @@
   }
 
   &__input {
-    margin-left: 53px;
-    border: 1px solid #d8d8d8;
-    border-radius: 16px;
+    margin-left: get-vw(53px);
+    border: get-vw(1px) solid #d8d8d8;
+    border-radius: get-vw(16px);
     padding: 2em 1.5em;
     box-shadow: 4px 4px 25px 0 rgb(149 149 150 / 10%);
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: max(12px, get-vw(14px));
+    font-size: get-vw(14px);
     color: #000;
     background: #fff;
   }
