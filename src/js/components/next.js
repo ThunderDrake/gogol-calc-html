@@ -2,6 +2,8 @@ const sections = document.querySelectorAll('.content-section');
 const nextButton = document.querySelector('[data-step="next"]');
 const prevButtons = document.querySelectorAll('.btn__back');
 const bottomButtons = document.querySelectorAll('.pagination__item');
+const modelsButtons = document.querySelectorAll('.main__item-radio');
+const squareBlock = document.querySelector('.square__left');
 
 sections[0].style.display = "block";
 
@@ -124,6 +126,68 @@ if(bottomButtons.length > 0) {
     })
   })
 }
+
+function chooseType() {
+  modelsButtons.forEach(el=>{
+    el.addEventListener('change', (e)=>{
+      const target = e.target;
+      const items = target.dataset.size.split(',');
+      squareBlock.innerHTML = "";
+
+      items.forEach(item => {
+        const size = item.split(":")[0];
+        const price = item.split(":")[1];
+        const id = item.split(":")[2]
+        const sizeLabel = `
+        <label class="square__input" data-square>
+          <div class="square__input__indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+              <rect x="0.5" y="1" width="27" height="27" rx="13.5" fill="white" stroke="#D8D8D8"/>
+              <circle cx="14" cy="14.5" r="8" fill="#1A2A5D"/>
+            </svg>
+          </div>
+          <input type="radio" name="square" value="${price}" data-name="Площадь ${size} М2" data-id="${id}">
+          <div class="square__number square__number--small">
+            ${size} М2
+          </div>
+          <div class="square__text">
+            ${price} руб.
+          </div>
+        </label>
+        `;
+        squareBlock.insertAdjacentHTML("beforeend", sizeLabel)
+      })
+
+      const squareInput = document.querySelectorAll('[data-square] input');
+      squareInput.forEach(input => {
+        const inputId = input.dataset.id;
+        input.addEventListener('change', (e)=>{
+          const target = e.target;
+
+          fetch('../base.json')
+            .then((response) => response.json())
+            .then((data) => {
+              const currentData = data[inputId];
+
+              for(const [key, value] of Object.entries(currentData)){
+                const input = document.querySelector(`[data-name="${key}"]`);
+
+                if(input) {
+                  input.value = value;
+
+                  const wrapper = input.closest('label');
+                  const number = wrapper.querySelector('[data-number] span');
+                  number.innerText = `+ ${value}`
+                }
+              }
+            })
+        })
+      })
+    })
+  });
+}
+
+chooseType()
 
 switchSection()
 
