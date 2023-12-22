@@ -146,7 +146,7 @@ function chooseType() {
               <circle cx="14" cy="14.5" r="8" fill="#1A2A5D"/>
             </svg>
           </div>
-          <input type="radio" name="square" value="${price}" data-name="Площадь ${size} М2" data-id="${id}">
+          <input type="radio" name="square" value="${price.replace(/[^+\d]/g, '')}" data-name="Площадь ${size} М2" data-id="${id}">
           <div class="square__number square__number--small">
             ${size} М2
           </div>
@@ -173,11 +173,13 @@ function chooseType() {
                 const input = document.querySelector(`[data-name="${key}"]`);
 
                 if(input) {
-                  input.value = value;
+                  input.value = value.replace(/[^+\d]/g, '');
 
                   const wrapper = input.closest('label');
                   const number = wrapper.querySelector('[data-number] span');
-                  number.innerText = `+ ${value}`
+                  if (number) {
+                    number.innerText = `+ ${value}`
+                  }
                 }
               }
             })
